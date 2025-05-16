@@ -1,15 +1,21 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header({ total }) {
+
+const Header = () => {
   return (
-    <header>
-      <h1>E-Commerce React</h1>
-      <nav>
-        <Link to="/">Inicio</Link>
-        <Link to="/carrito">Carrito ({total})</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/registro">Registro</Link>
-      </nav>
+    <header className="header">
+      <div className="contenedor-header">
+        <h1 className="nombre-tienda">🛒 MiTienda React</h1>
+        <nav className="nav-links">
+          <Link to="/">Inicio</Link>
+          <Link to="/carrito">Carrito</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/registro">Registro</Link>
+        </nav>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
