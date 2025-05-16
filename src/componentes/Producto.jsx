@@ -1,13 +1,15 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Producto({ producto, agregarAlCarrito }) {
+const Producto = ({ producto }) => {
   return (
-    <div className="producto">
-      <img src={producto.thumbnail} alt={producto.title} />
+    <div className="producto-card">
+      <img src={producto.thumbnail} alt={producto.title} style={{ width: '200px' }} />
       <h3>{producto.title}</h3>
-      <p>${producto.price}</p>
-      <Link to={`/producto/${producto.id}`}>Ver detalles</Link>
-      <button onClick={() => agregarAlCarrito(producto)}>Añadir al carrito</button>
+      <p>Precio: ${producto.price}</p>
+      <Link to={`/detalle/${producto.id}`}>Ver detalles</Link>
     </div>
   );
-}
+};
+
+export default Producto;
