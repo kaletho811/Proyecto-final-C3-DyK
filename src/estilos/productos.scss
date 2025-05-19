@@ -1,0 +1,36 @@
+.contenedor-productos {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .input-busqueda,
+  .dropdown-categorias {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+
+  .input-busqueda:hover,
+  .dropdown-categorias:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+  }
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
