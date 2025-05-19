@@ -37,42 +37,6 @@ header {
   color: #ffcb05;
 }
 
-.productos-lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.producto-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-
-.producto-card:hover {
-  transform: translateY(-5px);
-}
-
-.producto-card img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.producto-card h3 {
-  margin: 10px 0 5px;
-}
-
-.producto-card p {
-  margin: 5px 0;
-  font-weight: bold;
-  color: #28a745;
-}
-
 button {
   background: #28a745;
   color: white;

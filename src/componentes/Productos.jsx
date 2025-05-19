@@ -50,10 +50,10 @@ const Productos = () => {
           className="dropdown-categorias"
         >
           <option value="all">Todas las categorías</option>
-          <option value="smartphones">Smartphones</option>
-          <option value="laptops">Laptops</option>
+          <option value="beauty">Maquillaje</option>
+          <option value="furniture">Muebles</option>
           <option value="fragrances">Perfumes</option>
-          <option value="skincare">Cuidado de la piel</option>
+          <option value="groceries">Comestibles</option>
         </select>
       </div>
 

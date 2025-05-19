@@ -1,15 +1,45 @@
-.contenedor-productos {
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
   padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
+}
+.producto-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.producto-card h3 {
+  margin: 10px 0 5px;
+}
+
+.producto-card p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #28a745;
 }
 
 .filtros {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 2rem;
+  margin: 2rem;
 
   .input-busqueda,
   .dropdown-categorias {
@@ -29,8 +59,4 @@
   }
 }
 
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
+
