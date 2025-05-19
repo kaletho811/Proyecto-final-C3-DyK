@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Producto from '../componentes/Producto';
-
+import Productos from '../componentes/Productos';
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -22,9 +22,9 @@ const Inicio = () => {
 
   return (
     <div className="productos-lista">
-      {productos.map(producto => (
-        <Producto key={producto.id} producto={producto} />
-      ))}
+      <Productos />
+      
+      
     </div>
   );
 };
