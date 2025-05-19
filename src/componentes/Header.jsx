@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="contenedor-header">
-        <h1 className="nombre-tienda">🛒 MiTienda React</h1>
+        <h1 className="nombre-tienda">🛒 D&K Store</h1>
         <nav className="nav-links">
           <Link to="/">Inicio</Link>
           <Link to="/carrito">Carrito</Link>
