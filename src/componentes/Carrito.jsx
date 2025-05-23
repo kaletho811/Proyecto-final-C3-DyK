@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 const Carrito = () => {
   const [carrito, setCarrito] = useState([]);
 
@@ -19,10 +20,15 @@ const Carrito = () => {
     localStorage.removeItem('carrito');
   };
 
+  const realizarCompra = () => {
+    alert(`¡Gracias por tu compra! Total pagado: $${total}`);
+    vaciarCarrito();
+  };
+
   const total = carrito.reduce((acc, prod) => acc + (prod.price * prod.cantidad), 0);
 
   return (
-    <div>
+    <div className="carrito">
       <h2>Carrito de Compras</h2>
       {carrito.length === 0 ? (
         <p>Tu carrito está vacío.</p>
@@ -39,7 +45,8 @@ const Carrito = () => {
             ))}
           </ul>
           <h3>Total: ${total}</h3>
-          <button onClick={vaciarCarrito}>Vaciar carrito</button>
+          <button onClick={vaciarCarrito}>Vaciar carrito</button>{' '}
+          <button onClick={realizarCompra}>Comprar</button>
         </div>
       )}
     </div>
@@ -47,3 +54,4 @@ const Carrito = () => {
 };
 
 export default Carrito;
+

@@ -6,14 +6,30 @@ export default function Login() {
 
   const manejarLogin = (e) => {
     e.preventDefault();
+
+    if (!usuario.trim() || !password.trim()) {
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
+
     alert(`Bienvenido, ${usuario}!`);
+    // Aquí puedes continuar con lógica de login
   };
 
   return (
     <form onSubmit={manejarLogin}>
       <h2>Iniciar sesión</h2>
-      <input placeholder="Usuario" value={usuario} onChange={(e) => setUsuario(e.target.value)} />
-      <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <input
+        placeholder="Usuario"
+        value={usuario}
+        onChange={(e) => setUsuario(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Contraseña"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
       <button type="submit">Ingresar</button>
     </form>
   );

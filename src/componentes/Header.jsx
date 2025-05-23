@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../estilos/header.scss';
 
 const Header = () => {
   return (

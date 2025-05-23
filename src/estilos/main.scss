@@ -1,124 +1,17 @@
+@use './variables' as *;
+@use './header';
+@use './botones';
+@use './formularios';
+@use './productos';
+@use './carrito';
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url(./imagenes/FONDIX.JPG) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
-  background: #f7f9fc;
-  color: #333;
-}
-
-header {
-  background: #1e1e2f;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.nombre-tienda {
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ffcb05;
-}
-
-button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #218838;
-}
-
-form {
-  background: white;
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-form input {
-  width: 95%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.detalle-producto {
-  max-width: 800px;
-  margin: 40px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.detalle-producto img {
-  max-width: 300px;
-  border-radius: 10px;
-}
-
-.detalle-producto p {
-  margin: 10px 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-li img {
-  border-radius: 8px;
-}
-
-select {
-  padding: 10px;
-  margin: 20px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+  color: $text-color;
 }
