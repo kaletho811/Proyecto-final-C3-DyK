@@ -7,7 +7,6 @@ import RegistroPagina from './paginas/RegistroPagina';
 import CarritoPagina from './paginas/CarritoPagina';
 import Header from './componentes/Header';
 
-
 function App() {
   return (
     <Router>
