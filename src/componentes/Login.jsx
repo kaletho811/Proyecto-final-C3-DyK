@@ -13,7 +13,9 @@ export default function Login() {
     }
 
     alert(`Bienvenido, ${usuario}!`);
-    // Aquí puedes continuar con lógica de login
+
+    setUsuario('');
+    setPassword('');
   };
 
   return (

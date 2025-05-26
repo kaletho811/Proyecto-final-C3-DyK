@@ -15,7 +15,10 @@ export default function Registro() {
     }
 
     alert(`Usuario ${usuario} registrado exitosamente.`);
-    // Aquí puedes continuar con lógica de registro
+
+    setUsuario('');
+    setEmail('');
+    setPassword('');
   };
 
   return (

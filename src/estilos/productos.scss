@@ -20,6 +20,7 @@
 }
 
 .producto-card:hover {
+  background-color: $titulos-color;
   transform: translateY(-5px);
 }
 
@@ -35,7 +36,7 @@
 .producto-card p {
   margin: 5px 0;
   font-weight: bold;
-  color: #28a745;
+  color: $primary-color;
 }
 
 .filtros {

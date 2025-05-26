@@ -8,7 +8,7 @@ form {
   margin: 40px auto;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow-1;
 
   h2 {
     text-align: center;
@@ -16,11 +16,13 @@ form {
   }
 
   input {
+    background-color: $secondary-color;
     width: 95%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+    box-shadow: $shadow-2;
   }
 }

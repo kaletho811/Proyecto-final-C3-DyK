@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import '../estilos/detalles.scss';
 
 const DetalleProducto = () => {
   const { id } = useParams();
@@ -30,7 +31,6 @@ const DetalleProducto = () => {
       <p>Precio: ${producto.price}</p>
       <p>Categoría: {producto.category}</p>
       <p>Marca: {producto.brand}</p>
-      {/* Puedes agregar más detalles según la API */}
     </div>
   );
 };

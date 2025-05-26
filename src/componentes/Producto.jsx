@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Producto = ({ producto }) => {
-  const agregarAlCarrito = () => {
+  const navigate = useNavigate();
+
+  const agregarAlCarrito = (e) => {
+    e.stopPropagation();
+
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const existe = carrito.find(item => item.id === producto.id);
     if (!existe) {
@@ -13,8 +18,12 @@ const Producto = ({ producto }) => {
     alert('Producto agregado al carrito');
   };
 
+  const verDetalles = () => {
+    navigate(`/producto/${producto.id}`);
+  };
+
   return (
-    <div className="producto-card">
+    <div className="producto-card" onClick={verDetalles} style={{ cursor: 'pointer' }}>
       <img src={producto.thumbnail} alt={producto.title} style={{ width: '200px' }} />
       <h3>{producto.title}</h3>
       <p>Precio: ${producto.price}</p>
@@ -24,3 +33,4 @@ const Producto = ({ producto }) => {
 };
 
 export default Producto;
+
